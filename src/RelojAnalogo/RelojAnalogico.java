@@ -15,12 +15,14 @@ package RelojAnalogo;
 		public static void main(String[] args) {
 			
 	        JFrame frame = new JFrame("Reloj Analógico");
-	        frame.setPreferredSize(new Dimension(220,250));
+	        frame.setPreferredSize(new Dimension(220,250)); 
 	        RelojAnalogico reloj = new RelojAnalogico();
 	        frame.add(reloj);
 	        frame.pack();
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        frame.setVisible(true);
+	        frame.setResizable(false);
+	        frame.setLocationRelativeTo(null);
 	        reloj.start();
 	    }			
 				
@@ -32,7 +34,6 @@ package RelojAnalogo;
 	    //Constructor
 	    public RelojAnalogico() {
 	        setBackground(Color.white);
-	        setSize(200, 200);
 	        setDoubleBuffered(true);
 	    }
 	    
